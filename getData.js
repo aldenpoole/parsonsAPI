@@ -13,6 +13,6 @@ const getMethod = {
    .then((responseJson) => {
     var i;
     for(i =0; i< (responseJson).length; i++){
-        console.log(responseJson[i].id)
+        console.log(responseJson[i])
 
     };})
