@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+import fetch from 'node-fetch'
 
 const getMethod = {
     method: 'GET', 
@@ -8,30 +8,18 @@ const getMethod = {
 
    }
 const deleteMethod = {
-    method: 'DELETE', 
+    method: 'DELETE',
     headers: {
-     'Content-type': 'application/json; charset=UTF-8' 
-    },
-
+        'Content-type': 'application/json; charset=UTF-8' 
+       }
    }
   
 
-   fetch('http://localhost:3000/trajectories/', getMethod) 
+   fetch('http://localhost:5000/trajectories/', getMethod) 
    .then(response => response.json())
    .then((responseJson) => {
     var i;
     for(i =0; i< (responseJson).length; i++){
-        console.log("ID: " + responseJson[i].id + " deleted.")
-        fetch('http://localhost:3000/trajectories/' + responseJson[i].id, deleteMethod)
-    }console.log("Delete succesful.");})
-    
-   //.then((responseJson) => {
-    //console.log(responseJson);})
+        fetch('http://localhost:5000/trajectories/' + responseJson[i].id, deleteMethod)
+    }})
    .catch(err => console.log(err))
-   
-   
-
-
-
-
-

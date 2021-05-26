@@ -1,14 +1,17 @@
-const http = require('http')
+import fetch from 'node-fetch'
+
 
 const options = {
   method: 'POST',
   hostname: 'localhost',
-  port: 3000,
+  port: 5000,
   path: '/trajectories',
   headers: {
     'content-type': 'application/json',
   }
 }
+
+
 
 
 var i = 0;
@@ -38,25 +41,18 @@ for(i = 0; i < 1000; i++){
         stagename = stage[2];
         stagecount = 1;
     }
+    const postMethod = {
+        method: 'POST', 
+        headers: {
+         'Content-type': 'application/json; charset=UTF-8' 
+        },
+        body: JSON.stringify({ id: traj_id, type: stagename, velocity: veloc, angle: ang })
+    }
 
+    fetch('http://localhost:5000/trajectories/', postMethod) 
     
 
-    const req = http.request(options, res => {
-        const chunks = []
-      
-        res.on('data', chunk => {
-          chunks.push(chunk)
-        })
-      
-        res.on('end', () => {
-          const body = Buffer.concat(chunks)
-          console.log(body.toString())
-        })
-      })
-
-    req.write(JSON.stringify({ id: traj_id, type: stagename, velocity: veloc, angle: ang }))
-    req.end()
-    
+   
 }
 
 
