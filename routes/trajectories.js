@@ -29,7 +29,7 @@ router.get('/:id', (req, res) => {
 });
 //get trajectories based on launch phase... not working
 router.get('/:type', (req, res) => {
-    var type = req.params;
+    var { type } = req.params;
 
     var foundTrajectories = [] 
     var i =0;
