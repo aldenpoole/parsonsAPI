@@ -2,5 +2,8 @@
     "id": 1,
     "type": "launch",
     "velocity": 4333,
-    "angle": 301
+    "theta": 301,
+    "xpos": 2300,
+    "ypos":14234,
+    "zpos":65097
 }
