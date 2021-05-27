@@ -12,7 +12,7 @@ app.use('/trajectories', trajectoriesRoutes)
 
 app.get('/', (req, res) =>{
     console.log('TEST')
-    res.send('Hello from Homepage')
+    res.send('API Library for Trajectories')
 });
 
 app.listen(PORT, () => console.log(`Server running on port: http://localhost:${PORT}`));
