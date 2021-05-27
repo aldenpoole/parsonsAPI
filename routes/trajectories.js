@@ -1,7 +1,7 @@
 import express from 'express';
 
 const router = express.Router();
-const trajectories = []
+var trajectories = []
 
 router.post('/', (req, res) => {
     const trajectory = req.body;
@@ -12,15 +12,20 @@ router.post('/', (req, res) => {
 });
 
 router.delete('/', (req, res) => {
-
-        trajectories = [];
+    //clear array
+    trajectories =[];
     
-    
-    res.send(`Trajectories have been deleted.`);
 });
 
 router.get('/', (req, res) => {
     res.send(trajectories);
+});
+
+router.get('/:id', (req, res) => {
+    const { id } = req.params;
+
+    const foundTrajectory = trajectories.find((trajectory)=> trajectory.id == id);
+    res.send(foundTrajectory);
 });
 
 export default router;
