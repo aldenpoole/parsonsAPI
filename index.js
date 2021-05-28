@@ -1,18 +1,18 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-
-import trajectoriesRoutes from './routes/trajectories.js';
+import trajectoriesRoutes from './routes/trajectories/trajectories.js';
 
 const app = express();
 const PORT = 5000;
 
 app.use(bodyParser.json());
-
+//createData.js in /trajectories not working...
+//try importing it here.
 app.use('/trajectories', trajectoriesRoutes)
 
 app.get('/', (req, res) =>{
     console.log('TEST')
-    res.send('API Library for Trajectories')
+    res.send('RTS API Home')
 });
 
 app.listen(PORT, () => console.log(`Server running on port: http://localhost:${PORT}`));
