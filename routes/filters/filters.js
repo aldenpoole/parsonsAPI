@@ -6,11 +6,11 @@ const router = express.Router();
 
 router
     .route('/')
-    .post(createData)
-    .delete(deleteData)
-    .get(getData);
+    .post()
+    .delete()
+    .get();
     
 router
-    .get('/:id', getDataByID);
+    .get('/:id');
 
 export default router;
