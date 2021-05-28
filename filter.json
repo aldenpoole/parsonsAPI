@@ -1,0 +1,11 @@
+{
+    "name":"filter name",
+    "warhead": "nuclear",
+    "targetCountry": "NK",
+    "options" : {
+        "flight mode":"Depressed",
+        "earth shape model": "WGS-84",
+        "earth gravity model":"WGS-84",
+        "specification": "TMSS IRS"
+    }
+}
