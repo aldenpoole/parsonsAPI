@@ -1,6 +1,7 @@
 //postData.js creates a specified number of fake data objects
 
 import fetch from 'node-fetch'
+import { nanoid } from 'nanoid'
 
 //create posting method
 
@@ -34,7 +35,7 @@ function getRandomArbitrary(min, max) {
 
 for(i = 0; i < j; i++){
     //create ids for each trajectory
-    var traj_id = i+1;
+    var traj_id = nanoid();
     //random numbers for velocity (mps), angle, and position (km)
     var veloc = getRandomArbitrary(1066, 1371);
     var ang = getRandomArbitrary(1,359);
@@ -67,4 +68,6 @@ for(i = 0; i < j; i++){
 
    
 }
+
+
 
