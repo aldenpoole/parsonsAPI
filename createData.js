@@ -4,6 +4,8 @@ import fetch from 'node-fetch'
 
 //create posting method
 
+const fetcher = 'http://localhost:5000/trajectories/'
+
 const options = {
   method: 'POST',
   hostname: 'localhost',
@@ -60,11 +62,9 @@ for(i = 0; i < j; i++){
         body: JSON.stringify({ id: traj_id, type: stagename, velocity: veloc, theta: ang, xpos: xpos, ypos: ypos, zpos: zpos })
     }
 
-    fetch('http://localhost:5000/trajectories/', postMethod) 
+    fetch(fetcher, postMethod) 
     
 
    
 }
-
-
 
