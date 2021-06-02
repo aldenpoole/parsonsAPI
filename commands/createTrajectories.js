@@ -74,8 +74,8 @@ for(i = 0; i < j; i++){
         headers: {
          'Content-type': 'application/json; charset=UTF-8' 
         },
-        body: JSON.stringify({ id: traj_id, name: name, threat: threatTypeID, flightMode: flightMode,
-           launchName: lPointName, launchPoint: lPoint, launchTime: lTime, impactName: iPointName,
+        body: JSON.stringify({ id: traj_id, name: name, threat: threatTypeID, flightMode: flightMode, launchVars:[
+           {launchName: lPointName}, {launchPoint: lPoint}, {launchTime: lTime}], impactName: iPointName,
           impactPoint : iPoint, impactTime: iTime })
     }
 
