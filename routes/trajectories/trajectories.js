@@ -12,8 +12,11 @@ router
     
 router
     .get('/:id', getDataByID);
-//??
-router
+
+/*router
     .get('/:impactName', getDataByImpactName);
+*/
+router
+    .get('/', getDataByImpactName);
 
 export default router;
