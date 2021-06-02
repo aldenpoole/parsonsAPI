@@ -1,12 +1,12 @@
 {
     "id": 1,
     "name": "Kyoto",
-    "threatTypeID":"MDEF01",
+    "threat":"MDEF01",
     "flightMode":"depressed",
-    "launchPointName":"",
+    "launchName":"",
     "launchPoint":"",
     "launchTime":"",
-    "impactPointName":"NK",
+    "impactName":"NK",
     "impactPoint":"39.03, 125.77",
     "impactTime":"03:25:00"
 }
