@@ -24,12 +24,14 @@ export const getDataByID = (req, res) => {
 export const getDataByImpactName = (req, res) => {
     const { impactName } = req.params;
     var i = 0;
-    const foundTrajectories = [];
-    for(i =0; i < trajectories.length; i++){
+    var foundTrajectories = [];
+    
+    foundTrajectories = trajectories.filter(function(value){return value.impactName==impactName;});
+    /*for(i =0; i < trajectories.length; i++){
         if(trajectories[i].impactName == impactName){
             foundTrajectories =+ trajectories[i];
         }
-    }
+    }*/
     //const foundTrajectory = trajectories.find((trajectory)=> trajectory.type == stage);
     res.send(foundTrajectories);
 }

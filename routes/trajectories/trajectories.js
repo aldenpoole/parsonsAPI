@@ -14,6 +14,6 @@ router
     .get('/:id', getDataByID);
 //??
 router
-    .get('/:impactName:', getDataByImpactName);
+    .get('/:impactName', getDataByImpactName);
 
 export default router;
