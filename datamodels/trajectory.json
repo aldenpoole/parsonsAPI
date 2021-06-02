@@ -3,9 +3,9 @@
     "name": "Kyoto",
     "threat":"MDEF01",
     "flightMode":"depressed",
-    "launchName":"",
-    "launchPoint":"",
-    "launchTime":"",
+    "launchName":"Cuba",
+    "launchPoint":"23.06, -72.17",
+    "launchTime":"01:57:58",
     "impactName":"NK",
     "impactPoint":"39.03, 125.77",
     "impactTime":"03:25:00"
