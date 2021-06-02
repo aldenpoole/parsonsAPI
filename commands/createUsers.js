@@ -35,7 +35,7 @@ function getRandomInt(min, max) {
   }
 
 function randomDate(start, end) {
-    var d = new Date(start.getTime() + Math.random() * (end.getTime() -                     start.getTime())),
+    var d = new Date(start.getTime() + Math.random() * (end.getTime() -start.getTime())),
         month = '' + (d.getMonth() + 1),
         day = '' + d.getDate(),
         year = d.getFullYear();

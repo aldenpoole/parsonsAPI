@@ -23,44 +23,60 @@ const options = {
 var i = 0;
 var j = 1000;
 
-//give each trajectory one of three launch phases
-let stage = ['launch', 'midcourse','final']
-var stagecount = 1;
-var stagename = 'launch';
+//give each trajectory one of many names
+let names = ['Kyoto', 'Patriot','Falcon','Viper','Bulldog','Jericho', 'SRAM']
+let threatID = "MDEF";
+let flightModes=["depressed","boost","midcourse", "midcourse"];
+let points=[["NK","39.02, 125.77"],["Cuba","23.06, -82.17"],["Syria","36.16"],["Russia","59.86, 30.58"]];
 
 //random number in range generator
-function getRandomArbitrary(min, max) {
-  return Math.random() * (max - min) + min;
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
 }
+
+function randomTime(start, end) {
+  var d = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+
+  var HH = d.getHours();
+  var MM = d.getMinutes();
+  var SS = d.getSeconds();
+
+  return HH + ":" + MM + ":" + SS;
+}
+
 
 for(i = 0; i < j; i++){
     //create ids for each trajectory
     var traj_id = nanoid();
-    //random numbers for velocity (mps), angle, and position (km)
-    var veloc = getRandomArbitrary(1066, 1371);
-    var ang = getRandomArbitrary(1,359);
-    var xpos= getRandomArbitrary(-90, 90);
-    var ypos= getRandomArbitrary(-180, 180);
-    var zpos= getRandomArbitrary(500, 3400);
+
+    var name = names[getRandomInt(0,7)];
+    var threatTypeID = threatID + "" + i;
+    var flightMode = flightModes[getRandomInt(0,4)];
+
+    var point = [getRandomInt(0,4)];
+    var lPointName = (points[point][0]);
+    var lPoint = (points[point][1]);
+
+    var iPoint = [getRandomInt(0,4)];
+    var iPointName =(points[iPoint][0]);
+    var iPoint =(points[iPoint][1]);
+
+    var lTime = randomTime(new Date(2012, 0, 1), new Date());
+    var iTime = randomTime(new Date(2012, 0, 1), new Date());
     
     //use naming variables to cycle through phase names
-    if(stagecount == 1){
-        stagename = stage[0];
-        stagecount++;
-    }else if(stagecount == 2){
-        stagename = stage[1];
-        stagecount++;
-    }else{
-        stagename = stage[2];
-        stagecount = 1;
-    }
+  
         //assemble all variables and post to API
     const postMethod = {
         method: 'POST', 
         headers: {
          'Content-type': 'application/json; charset=UTF-8' 
         },
-        body: JSON.stringify({ id: traj_id, type: stagename, velocity: veloc, theta: ang, xpos: xpos, ypos: ypos, zpos: zpos })
+        body: JSON.stringify({ id: traj_id, name: name, threat: threatTypeID, flightMode: flightMode,
+           launchName: lPointName, launchPoint: lPoint, launchTime: lTime, impactName: iPointName,
+          impactPoint : iPoint, impactTime: iTime })
     }
 
     fetch(fetcher, postMethod) 
