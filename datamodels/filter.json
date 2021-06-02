@@ -2,7 +2,7 @@
     "id":0,
     "name":"filter name",
     "warhead": "nuclear",
-    "targetCountry": "NK",
+    "targetCountry": "/?impactName=NK",
     "options" : {
         "flight mode":"Depressed",
         "earth shape model": "WGS-84",

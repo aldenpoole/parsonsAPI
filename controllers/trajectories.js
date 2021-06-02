@@ -21,12 +21,12 @@ export const getDataByID = (req, res) => {
     res.send(foundTrajectory);
 }
 
-export const getDataByStage = (req, res) => {
-    const { stage } = req.params;
+export const getDataByImpactName = (req, res) => {
+    const { impactName } = req.params;
     var i = 0;
     const foundTrajectories = [];
     for(i =0; i < trajectories.length; i++){
-        if(trajectories[i].type == stage){
+        if(trajectories[i].impactName == impactName){
             foundTrajectories =+ trajectories[i];
         }
     }
