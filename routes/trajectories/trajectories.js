@@ -1,5 +1,5 @@
 import express from 'express';
-import { createData, deleteData, getData, getDataByID, getDataByImpactName } from '../../controllers/trajectories.js';
+import { createData, deleteData, getData, getDataByID} from '../../controllers/trajectories.js';
 
 const router = express.Router();
 
@@ -15,8 +15,11 @@ router
 
 /*router
     .get('/:impactName', getDataByImpactName);
-*/
+
 router
-    .get('/', getDataByImpactName);
+    .get('/:impactName', getDataByImpactName);*/
+
+    //in order for this to work, i need to create another routes js file so i can use .get('/') without interference from the 'id' get.
+    
 
 export default router;

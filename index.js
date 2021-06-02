@@ -8,8 +8,7 @@ const app = express();
 const PORT = 5000;
 
 app.use(bodyParser.json());
-//createData.js in /trajectories not working...
-//try importing it here.
+
 app.use('/trajectories', trajectoriesRoutes)
 app.use('/filters', filtersRoutes)
 app.use('/users', usersRoutes)

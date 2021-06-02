@@ -38,7 +38,7 @@ export const getDataByID = (req, res) => {
     res.send(foundTrajectories);
 }*/
 
-export const getDataByImpactName = (req, res) => { //trajectories?impactName=Russia
+/*export const getDataByImpactName = (req, res) => { //trajectories?impactName=Russia
     const { impactName } = req.query;
     var i = 0;
     var foundTrajectories = [];
@@ -48,7 +48,7 @@ export const getDataByImpactName = (req, res) => { //trajectories?impactName=Rus
         if(trajectories[i].impactName == impactName){
             foundTrajectories =+ trajectories[i];
         }
-    }*/
+    }
     //const foundTrajectory = trajectories.find((trajectory)=> trajectory.type == stage);
     res.send(foundTrajectories);
-}
+}*/
