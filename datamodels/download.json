@@ -14,18 +14,18 @@
             "ir":false, 
             "objects":[
                 {"rv":[
-                  {"rcs":"true"},
-                  {"ir":"true"},
-                  {"rf":[
-                    {"lBand":"true"},
-                    {"sBand":"true"},
-                    {"xBand":"false"},
-                    {"uhfBand":"true"}
+                  {"rcs":"true",
+                  "ir":"true",
+                  "rf":[
+                    {"lBand":"true",
+                    "sBand":"true",
+                    "xBand":"false",
+                    "uhfBand":"true"}
                 ]},
                   {"ir":[
-                    {"swir":"true"},
-                    {"mwir":"true"},
-                    {"lwir":"false"}
+                    {"swir":"true",
+                    "mwir":"true",
+                    "lwir":"false"}
                   ]}
             ]
             }]
