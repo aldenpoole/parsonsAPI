@@ -13,26 +13,24 @@
             "rcs":false, 
             "ir":false, 
             "objects":[
-                "rv":{
-                  "rcs":true,
-                  "ir":true,
-                  "rf":{
-                    "lBand":true,
-                    "sBand":true,
-                    "xBand":false,
-                    "uhfBand":true
-                  },
-                  "ir":{
-                    "swir":true,
-                    "mwir":true,
-                    "lwir":false
-                  }
-                }
-            ]},
-          {
-            "uid":"23345-23421-252-12314"
-          }
-        ]
+                {"rv":[
+                  {"rcs":"true"},
+                  {"ir":"true"},
+                  {"rf":[
+                    {"lBand":"true"},
+                    {"sBand":"true"},
+                    {"xBand":"false"},
+                    {"uhfBand":"true"}
+                ]},
+                  {"ir":[
+                    {"swir":"true"},
+                    {"mwir":"true"},
+                    {"lwir":"false"}
+                  ]}
+            ]
+            }]
+          
+          }]
     }
   }
   
