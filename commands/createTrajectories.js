@@ -103,7 +103,7 @@ for(i = 0; i < j; i++){
          'Content-type': 'application/json; charset=UTF-8' 
         },
         body: JSON.stringify({ 
-          id: traj_id, 
+          uid: traj_id, 
           name: name, 
           threat: threatTypeID, 
           flightMode: flightMode, 

@@ -11,7 +11,7 @@ router
     .get(getData);
     
 router
-    .get('/:id', getDataByID);
+    .get('/:uid', getDataByID);
 
 /*router
     .get('/:impactName', getDataByImpactName);

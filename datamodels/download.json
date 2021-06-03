@@ -5,31 +5,35 @@
       {"id":"5ecdb1a0-f1d2-42ee-959b-9dbd0e8a84f4"}
     ],
     "systemConfiguration":[
-      {"includeAllRCS":"false"}, 
-      {"includeAllIR":"false"}, 
-      {"systems":[
-            {"uid":"23345-23421-252-12314"},
-            {"rcs":"false"}, 
-            {"ir":"false"}, 
-            {"objects":[
-              {"rv":[
-                {"rcs":"true"},
-                {"ir":"true"},
-                {"rf":[
-                  {"lBand":"true"},
-                  {"sBand":"true"},
-                  {"xBand":"false"},
-                  {"uhfBand":"true"}
-                ]},
-                {"ir":[
-                  {"swir":"true"},
-                  {"mwir":"true"},
-                  {"lwir":"false"}
-                ]}
-              ]}
-            ]}
-        ]}
-      ]
-    
-  }
+      {
+        "includeAllRCS":"false", 
+        "includeAllIR":"false", 
+        "systems":[
+            {
+              "uid":"23345-23421-252-12314",
+              "ir":[
+                {
+                  "swir":"true",
+                  "mwir":"true",
+                  "lwir":"false"
+                }], 
+              "objects":[
+                {
+                  "rv":[
+                    {
+                      "rcs":"true",
+                      "ir":"true",
+                      "rf":[
+                        {
+                          "lBand":"true",
+                          "sBand":"true",
+                          "xBand":"false",
+                          "uhfBand":"true"
+                        }]
+                    }]
+                }]
+              }]
+  
+      }]
+}
   

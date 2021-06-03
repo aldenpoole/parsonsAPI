@@ -1,3 +1,4 @@
+import fs from 'fs'
 let trajectories = []
 
 export const createData = (req, res) => {
@@ -11,6 +12,8 @@ export const deleteData = (req, res) => {
 }
 
 export const getData = (req, res) => {
+    
+    //res.json({html: "<a href='../'>Go Back</a><br>", data: trajectories});
     res.send(trajectories);
 }
 

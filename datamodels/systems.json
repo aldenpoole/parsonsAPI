@@ -1,0 +1,29 @@
+{
+  "uid":"d8ff1c9b-087d-48c3-9074-42bf73602ae3",
+  "name":"no_dong",
+  "fileInformation":{
+    "totalSizeRCS":"10mb",
+    "totalSizeIR":"3mb",
+    "objects":[
+      {
+        "rv":{
+          "totalSizeRCS":"10mb",
+          "totalSizeIR":"3mb",
+          "fileSizes":{
+            "rf":{
+              "lBand":"1mb",
+              "sBand":"2mb",
+              "xBand":"NA",
+              "uhfBand":"7mb"
+            },
+            "ir":{
+              "swir":"1mb",
+              "mwir":"1mb",
+              "lwir":"1mb"
+            }
+          }
+        }
+      }
+    ]
+  }
+}​
