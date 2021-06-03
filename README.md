@@ -7,4 +7,4 @@ object structure.
 
 5/31: user object routes and controllers set, index page updated to use those routes. attempted to add extra API queries, also attempted to have router automatically set routers to newly added endpoints.
 
-6/1: filter, downloads, and trajectories models continue to be updated to match data found in data dictionary. create trajectories script updated to reflect changes. 
+6/1: filter, downloads, and trajectories models continue to be updated to match data found in data dictionary. create trajectories script updated to reflect changes. create systems model, route, and controller. create a creation script for systems. add html element to index.
