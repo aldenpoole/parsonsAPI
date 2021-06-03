@@ -18,37 +18,27 @@ export const getDataByID = (req, res) => {
     const { id } = req.params;
 
     const foundTrajectory = trajectories.find((trajectory)=> trajectory.id == id);
+    
+   /*res.format({
+        json: function () {
+            var traj = JSON.stringify(foundTrajectory, null, 4)
+            res.send(traj)
+        }
+    })*/
+    
+    
     res.send(foundTrajectory);
 }
 
-/*export const getDataByImpactName = (req, res) => {
-    const { impactName } = req.params;
+export const getDataByStage = (req, res) => {
+    const { stage } = req.params;
     var i = 0;
-    var foundTrajectories = [];
-    
-    foundTrajectories = trajectories.filter(function(value){return value.impactName==impactName;});
-    //for(i =0; i < trajectories.length; i++){
-        //if(trajectories[i].impactName == impactName){
-      //      foundTrajectories =+ trajectories[i];
-        }
-    //}
-    
-    //const foundTrajectory = trajectories.find((trajectory)=> trajectory.type == stage);
-    
-    res.send(foundTrajectories);
-}*/
-
-/*export const getDataByImpactName = (req, res) => { //trajectories?impactName=Russia
-    const { impactName } = req.query;
-    var i = 0;
-    var foundTrajectories = [];
-    
-    foundTrajectories = trajectories.filter(function(value){return value.impactName==impactName;});
-    /*for(i =0; i < trajectories.length; i++){
-        if(trajectories[i].impactName == impactName){
+    const foundTrajectories = [];
+    for(i =0; i < trajectories.length; i++){
+        if(trajectories[i].type == stage){
             foundTrajectories =+ trajectories[i];
         }
     }
     //const foundTrajectory = trajectories.find((trajectory)=> trajectory.type == stage);
     res.send(foundTrajectories);
-}*/
+}

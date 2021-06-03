@@ -4,33 +4,32 @@
       {"id":"940b3e04-768e-4e7a-bcc6-6133aa00775d"},
       {"id":"5ecdb1a0-f1d2-42ee-959b-9dbd0e8a84f4"}
     ],
-    "systemConfiguration":{
-      "includeAllRCS":false, 
-      "includeAllIR":false, 
-      "systems":[
-          {
-            "uid":"23345-23421-252-12314",
-            "rcs":false, 
-            "ir":false, 
-            "objects":[
-                {"rv":[
-                  {"rcs":"true",
-                  "ir":"true",
-                  "rf":[
-                    {"lBand":"true",
-                    "sBand":"true",
-                    "xBand":"false",
-                    "uhfBand":"true"}
+    "systemConfiguration":[
+      {"includeAllRCS":"false"}, 
+      {"includeAllIR":"false"}, 
+      {"systems":[
+            {"uid":"23345-23421-252-12314"},
+            {"rcs":"false"}, 
+            {"ir":"false"}, 
+            {"objects":[
+              {"rv":[
+                {"rcs":"true"},
+                {"ir":"true"},
+                {"rf":[
+                  {"lBand":"true"},
+                  {"sBand":"true"},
+                  {"xBand":"false"},
+                  {"uhfBand":"true"}
                 ]},
-                  {"ir":[
-                    {"swir":"true",
-                    "mwir":"true",
-                    "lwir":"false"}
-                  ]}
-            ]
-            }]
-          
-          }]
-    }
+                {"ir":[
+                  {"swir":"true"},
+                  {"mwir":"true"},
+                  {"lwir":"false"}
+                ]}
+              ]}
+            ]}
+        ]}
+      ]
+    
   }
   

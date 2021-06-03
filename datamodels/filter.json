@@ -2,12 +2,57 @@
     
     "id":0,
     "name": "warhead",
-    "options" : [
+    "payloadOptions" : [
         {"label":"nuclear", 
-         "value": "0"},
+            "value": "0"},
         {"label":"ballistic",
-         "value":"0"}
+            "value":"0"}
+    ],
+
+    "launchOptions": [
+        {"label":"launchPointName",
+            "value":"Cuba"},
+        {"label":"launchPoint",
+            "value":"23.06, -72.17"},
+        {"label":"launchTime",
+            "value": "00:00:00"}
+    ],
+
+    "impactOptions": [
+        {"label":"impactPointName",
+            "value":"NK"},
+        {"label":"impactPoint",
+            "value":"39.03, 125.77"},
+        {"label":"impactTime",
+            "value": "00:00:00"}
+
+    ],
+
+    "earthOptions":[
+        {"label":"earthGravityModel",
+            "value":"WGS-84"},
+        {"label":"earthShapeModel",
+            "value":"WGS-84"},
+        {"label":"atmosphericModel",
+            "value":"1970 Standard Atmosphere Model"}
+    ],
+
+    "rotationOptions":[
+        {"label":"rotation",
+            "value":"non rotating"},
+        {"label":"rotationCoordinateFrame",
+            "value":"ECI"}
+    ],
+
+    "missileUtilitiesOptions":[
+        {"label":"numberOfPBVs",
+            "value":"0"},
+        {"label":"numberofRVs",
+            "value":"0"},
+        {"label":"numberOfObjs",
+            "value":"0"}
     ]
-    
 }
+    
+
 

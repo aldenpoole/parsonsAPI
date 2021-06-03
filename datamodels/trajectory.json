@@ -1,13 +1,39 @@
 {
+    "__comment":"Data model for trajectory API object",
+
     "id": 1,
     "name": "Kyoto",
     "threat":"MDEF01",
     "flightMode":"depressed",
+    "warhead":"HEU",
+    "countermMeasures":"yes",
     "launchVars" :[
-        {"launchName":"Cuba",
-        "launchPoint":"23.06, -72.17",
-        "launchTime":"01:57:58"}],
-    "impactName":"NK",
-    "impactPoint":"39.03, 125.77",
-    "impactTime":"03:25:00"
+            {"launchName":"Cuba"},
+            {"launchPoint":"23.06, -72.17"},
+            {"launchTime":"01:57:58"},
+            {"launchAzimuth":"165.421"}
+        ],
+    "apogeeVars":[
+            {"apogeeAltitude":"200.357"},
+            {"apogeeTime":"248.64"}
+        ],
+    "impactVars" :[  
+            {"impactName":"NK"},
+            {"impactPoint":"39.03, 125.77"},
+            {"impactTime":"03:25:00"}
+        ],
+    "earthVars":[
+            {"gravityModel":"WGS-84"},
+            {"shapeModel":"WGS-84"},
+            {"atmosphericModel":"1976 Standard Atmosphere Model"}
+        ],
+    "rotationVars":[
+            {"rotation":"non rotating"},
+            {"rotationCoordinateFrame":"ECI"}
+        ],
+    "missileUtilities":[
+            {"numberOfPBVs":"0"},
+            {"numberofRVs":"0"},
+            {"numberOfObjs":"0"}
+        ]
 }
