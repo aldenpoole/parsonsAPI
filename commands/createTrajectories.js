@@ -63,7 +63,7 @@ for(i = 0; i < j; i++){
     var traj_id = nanoid();
 
     var name = names[getRandomInt(0,7)];
-    var threatTypeID = threatID + "" + i;
+    var threatTypeID = threatID + "" + (getRandomInt(0,100));
     var flightMode = flightModes[getRandomInt(0,4)];
 
     var gravModel = earthID + "" + getRandomInt(0,91);
