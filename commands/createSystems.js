@@ -2,7 +2,7 @@
 
 import fetch from 'node-fetch'
 import { nanoid } from 'nanoid'
-import cliProgress from 'cli-progress'
+
 
 //create posting method
 
@@ -18,14 +18,11 @@ const options = {
   }
 }
 
-const bar1 = new cliProgress.SingleBar({}, cliProgress.Presets.shades_classic)
-
-
 //define loop variables to determine how many objects are created
 var i = 0
-var j = 12
+var j = 1000
 
-bar1.start(j, 0)
+
 
 //give each trajectory one of many names
 let names = ['nodong', 'hwasong','ghauri']
@@ -42,7 +39,7 @@ function getRandomInt(min, max) {
 
 
 for(i = 0; i < j; i++){
-    bar1.update(i+1);
+ 
     //create ids for each trajectory
     var uID = nanoid();
 
@@ -117,5 +114,5 @@ for(i = 0; i < j; i++){
 
    
 }
-bar1.stop();
+
 
