@@ -23,7 +23,7 @@ const options = {
 var i = 0;
 var j = 25;
 
-//give each trajectory one of three launch phases
+//give user a random/unique name
 let firstNames = ['Alex', 'Geddy','Neil', 'Phil', 'Tony']
 let lastNames = ['Lifeson', 'Lee','Peart', 'Collins', 'Banks', 'Gabriel', 'Rutherford', 'Daltrey', 'Howe', 'Anderson', 'Bruford', 'Squire', 'Wakeman']
 
@@ -48,7 +48,6 @@ function randomDate(start, end) {
 
 for(i = 0; i < j; i++){
     //create ids for each user
-    //var traj_id = nanoid();
 
     var traj_id = i+1;
     
@@ -59,7 +58,7 @@ for(i = 0; i < j; i++){
     console.log(first + " " + last + " -- added.\n");
 
     var birthday= randomDate(new Date(1950, 0, 1), new Date(2000, 0, 1));
-
+    //give random username to user
     var userName = first + getRandomInt(100,999);
 
 
