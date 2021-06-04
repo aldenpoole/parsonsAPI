@@ -24,7 +24,7 @@ var j = 1000
 
 
 
-//give each trajectory one of many names
+//give each system one of three names, define file size unit
 let names = ['nodong', 'hwasong','ghauri']
 let fileSizeType ="mb"
 
@@ -40,9 +40,9 @@ function getRandomInt(min, max) {
 
 for(i = 0; i < j; i++){
  
-    //create ids for each trajectory
+    //create ids for each system
     var uID = nanoid();
-
+    //create random variables for each attribute
     var name = names[getRandomInt(0,4)];
 
     var lBand = getRandomInt(0,6) 
@@ -70,7 +70,7 @@ for(i = 0; i < j; i++){
     totalIR = totalIR + "" + fileSizeType
     
   
-    //use naming variables to cycle through phase names
+ 
   
         //assemble all variables and post to API
     const postMethod = {
