@@ -6,9 +6,7 @@ const router = express.Router();
 
 router
     .route('/')
-    .post(createData)
-    .delete(deleteData)
-    .get(getData);
+    .post(getData)
     
 router
     .get('/:uid', getDataByID);
